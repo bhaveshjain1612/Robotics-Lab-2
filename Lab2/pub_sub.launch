@@ -1,0 +1,12 @@
+
+<launch>
+
+	<node name="publisher_node" pkg="pub_sub_pkg" type="publisher.py"
+	output="screen"/>
+
+
+	<node name="subscriber_node" pkg="pub_sub_pkg" type="subscriber.py"
+	output="screen"/>
+
+
+</launch>
