@@ -9,7 +9,7 @@ This file is used to read information from the node, that was published by the p
 ### Launch
 This is alunch file for the **pub_sub_pkg** package and can be used to launch both _publisher_ and _subscriber_ files.<br>
 This file is named _pub_sub.launch_
-###Note
+### Note
 Before launching the either of the files, execute the commands below in the terminal:<br>
 #### Shift Directory to _catkin workspace_
 ```
