@@ -1,2 +1,2 @@
-# Robotics-Lab-2
-A repository containing the key codes for robotics lab 2 for 5th semester Mechatronics
+# Self Balancing Platform
+This repository servess as the core reource and code dump for the 5th semester Robotics Lab 2 miniproject.
