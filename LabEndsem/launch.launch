@@ -1,0 +1,14 @@
+<launch>
+  <node
+    pkg="path_tracker"
+    type="pub.py"
+    name="pub" 
+    output="screen"
+  />
+  <node
+    pkg="path_tracker"
+    type="sub.py"
+    name="sub"
+    output="screen"
+  />
+</launch> 
