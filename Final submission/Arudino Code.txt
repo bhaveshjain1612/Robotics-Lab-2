@@ -1,0 +1,49 @@
+#include <ros.h>
+#include <Servo.h>
+#include <std_msgs/Float64.h>
+
+ros::NodeHandle h;
+
+Servo myservo;
+
+int pos = 90;
+
+void posit(const std_msgs::Float64& msg)
+{
+    
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(10);
+    digitalWrite(LED_BUILTIN, LOW);
+  
+  if(msg.data>0)
+  {
+      if(pos < 140)myservo.write(pos);
+      delay(5);
+      pos += 2;
+  }
+  else if(msg.data<0)
+  {
+      if(pos > 40)
+      {
+        myservo.write(pos);
+        delay(5);
+        pos -= 2;
+      }
+  }
+}
+
+ros::Subscriber<std_msgs::Float64> sub("chatter", &posit);
+
+void setup()
+{
+  pinMode(LED_BUILTIN, OUTPUT);
+  h.initNode();
+  h.subscribe(sub);
+  myservo.attach(9);
+}
+
+void loop()
+{
+  h.spinOnce();
+  delay(1);
+}
