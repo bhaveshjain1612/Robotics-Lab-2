@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<launch>
+
+  <node name="joy_node" pkg="joy" type="joy_node"/>
+  <node name="talker" pkg="teleop_arm" type="talker"/>
+  <node name="rosserial_python" pkg="rosserial_python" type="serial_node.py"/>
+
+</launch>
